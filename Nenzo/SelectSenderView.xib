@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CaviarDreams_Bold.ttf">
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jDt-bS-N8l" customClass="SelectSenderView" customModule="Nenzo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozZ-ND-AmH" userLabel="Bottom">
+                    <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-BW-udQ">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="13"/>
+                            <state key="normal" title="Next: Record Invitation">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nextPressed:" destination="jDt-bS-N8l" eventType="touchUpInside" id="UNR-js-jCz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HoF-BW-udQ" secondAttribute="trailing" id="N8J-5R-RYw"/>
+                        <constraint firstAttribute="height" constant="60" id="YN5-ya-3YK"/>
+                        <constraint firstItem="HoF-BW-udQ" firstAttribute="leading" secondItem="ozZ-ND-AmH" secondAttribute="leading" id="i97-w1-XYZ"/>
+                        <constraint firstItem="HoF-BW-udQ" firstAttribute="top" secondItem="ozZ-ND-AmH" secondAttribute="top" id="mco-Uj-7Hq"/>
+                        <constraint firstAttribute="bottom" secondItem="HoF-BW-udQ" secondAttribute="bottom" id="na8-g7-PnZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hp-XA-drF" userLabel="Top">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMx-1p-qAz" userLabel="ToggleView">
+                            <rect key="frame" x="240" y="33" width="120" height="25"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-Q6-e8W" userLabel="PhoneTab">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                    <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="Phone_Orange@1x">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="Phone_White@1x"/>
+                                    <connections>
+                                        <action selector="phoneTabPressed:" destination="jDt-bS-N8l" eventType="touchUpInside" id="NpH-hE-QVK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxX-pl-JmX">
+                                    <rect key="frame" x="60" y="0.0" width="60" height="25"/>
+                                    <state key="normal" image="Nenzo@1x">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="disabled" image="Nenzo_White@1x"/>
+                                    <connections>
+                                        <action selector="nenzoTabPressed:" destination="jDt-bS-N8l" eventType="touchUpInside" id="5b6-WW-V0T"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="fLx-Q6-e8W" firstAttribute="top" secondItem="JMx-1p-qAz" secondAttribute="top" id="1gZ-ze-crI"/>
+                                <constraint firstAttribute="bottom" secondItem="ZxX-pl-JmX" secondAttribute="bottom" id="4Fs-MV-oGN"/>
+                                <constraint firstAttribute="width" constant="120" id="F64-aZ-FJx"/>
+                                <constraint firstItem="fLx-Q6-e8W" firstAttribute="width" secondItem="ZxX-pl-JmX" secondAttribute="width" id="KbD-DC-G8O"/>
+                                <constraint firstAttribute="bottom" secondItem="fLx-Q6-e8W" secondAttribute="bottom" id="Mty-OD-f23"/>
+                                <constraint firstItem="fLx-Q6-e8W" firstAttribute="width" secondItem="JMx-1p-qAz" secondAttribute="width" multiplier="1:2" id="Van-z6-i9R"/>
+                                <constraint firstItem="ZxX-pl-JmX" firstAttribute="top" secondItem="JMx-1p-qAz" secondAttribute="top" id="ZI5-sQ-MEC"/>
+                                <constraint firstAttribute="height" constant="25" id="drB-LF-ou4"/>
+                                <constraint firstAttribute="trailing" secondItem="ZxX-pl-JmX" secondAttribute="trailing" id="hya-RD-dfp"/>
+                                <constraint firstItem="fLx-Q6-e8W" firstAttribute="leading" secondItem="JMx-1p-qAz" secondAttribute="leading" id="vLp-FV-9RE"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUJ-j2-Ft7">
+                            <rect key="frame" x="261" y="27" width="78" height="17"/>
+                            <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKA-uC-ZQ9">
+                            <rect key="frame" x="24" y="20" width="34" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="E9R-2F-rm1"/>
+                                <constraint firstAttribute="width" constant="34" id="J9J-Oy-ceL"/>
+                            </constraints>
+                            <state key="normal" image="Back_x1">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backPressed:" destination="jDt-bS-N8l" eventType="touchUpInside" id="2fv-An-BMV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKF-nE-v79">
+                            <rect key="frame" x="544" y="32" width="25" height="25"/>
+                            <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="8k8-X3-hex"/>
+                                <constraint firstAttribute="height" constant="25" id="vKJ-1h-ZDW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="11"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="JMx-1p-qAz" firstAttribute="centerY" secondItem="BKA-uC-ZQ9" secondAttribute="centerY" id="0va-63-csw"/>
+                        <constraint firstAttribute="bottom" secondItem="BKA-uC-ZQ9" secondAttribute="bottom" constant="10" id="4c1-U5-I6L"/>
+                        <constraint firstAttribute="trailing" secondItem="gKF-nE-v79" secondAttribute="trailing" constant="31" id="4wc-Bv-Ifb"/>
+                        <constraint firstAttribute="height" constant="70" id="A56-Eu-5cV"/>
+                        <constraint firstAttribute="bottom" secondItem="gKF-nE-v79" secondAttribute="bottom" constant="13" id="WDh-q0-73N"/>
+                        <constraint firstAttribute="centerY" secondItem="rUJ-j2-Ft7" secondAttribute="centerY" id="X0e-cK-ITE"/>
+                        <constraint firstItem="BKA-uC-ZQ9" firstAttribute="top" secondItem="7Hp-XA-drF" secondAttribute="top" constant="20" id="ayW-QD-eav"/>
+                        <constraint firstItem="BKA-uC-ZQ9" firstAttribute="leading" secondItem="7Hp-XA-drF" secondAttribute="leading" constant="24" id="pJD-dz-R83"/>
+                        <constraint firstAttribute="centerX" secondItem="rUJ-j2-Ft7" secondAttribute="centerX" id="uJ5-2L-E5L"/>
+                        <constraint firstItem="BKA-uC-ZQ9" firstAttribute="top" secondItem="7Hp-XA-drF" secondAttribute="top" constant="10" id="uU1-j8-neN"/>
+                        <constraint firstItem="JMx-1p-qAz" firstAttribute="centerY" secondItem="BKA-uC-ZQ9" secondAttribute="centerY" id="yRs-6Y-rzz"/>
+                        <constraint firstAttribute="centerX" secondItem="JMx-1p-qAz" secondAttribute="centerX" id="yYn-4x-TRq"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4c1-U5-I6L"/>
+                            <exclude reference="uU1-j8-neN"/>
+                            <exclude reference="yRs-6Y-rzz"/>
+                        </mask>
+                    </variation>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPQ-1b-Fpp">
+                    <rect key="frame" x="10" y="75" width="580" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XNb-lx-u8D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="searchUpdated:" destination="jDt-bS-N8l" eventType="editingChanged" id="aBw-wr-Z6N"/>
+                    </connections>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-4o-EIp">
+                    <rect key="frame" x="0.0" y="105" width="600" height="435"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="jDt-bS-N8l" id="rjX-ix-tsW"/>
+                        <outlet property="delegate" destination="jDt-bS-N8l" id="9oU-ZE-4ez"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7Hp-XA-drF" secondAttribute="trailing" id="0DF-LQ-9Jt"/>
+                <constraint firstItem="flQ-4o-EIp" firstAttribute="leading" secondItem="jDt-bS-N8l" secondAttribute="leading" id="0va-uT-eQn"/>
+                <constraint firstItem="7Hp-XA-drF" firstAttribute="leading" secondItem="jDt-bS-N8l" secondAttribute="leading" id="CiY-oH-dDZ"/>
+                <constraint firstItem="dPQ-1b-Fpp" firstAttribute="leading" secondItem="jDt-bS-N8l" secondAttribute="leading" constant="10" id="EX6-ec-mwz"/>
+                <constraint firstAttribute="trailing" secondItem="dPQ-1b-Fpp" secondAttribute="trailing" constant="10" id="J5R-1l-OGW"/>
+                <constraint firstAttribute="trailing" secondItem="flQ-4o-EIp" secondAttribute="trailing" id="JHC-ie-kwJ"/>
+                <constraint firstItem="flQ-4o-EIp" firstAttribute="top" secondItem="JMx-1p-qAz" secondAttribute="bottom" constant="47" id="Q4X-Dd-AxX"/>
+                <constraint firstAttribute="trailing" secondItem="ozZ-ND-AmH" secondAttribute="trailing" id="XRR-rF-FVO"/>
+                <constraint firstItem="dPQ-1b-Fpp" firstAttribute="top" secondItem="JMx-1p-qAz" secondAttribute="bottom" constant="17" id="arP-6S-W3m"/>
+                <constraint firstItem="ozZ-ND-AmH" firstAttribute="leading" secondItem="jDt-bS-N8l" secondAttribute="leading" id="bMv-QC-OQf"/>
+                <constraint firstItem="ozZ-ND-AmH" firstAttribute="top" secondItem="flQ-4o-EIp" secondAttribute="bottom" id="ifZ-d3-DOW"/>
+                <constraint firstItem="7Hp-XA-drF" firstAttribute="top" secondItem="jDt-bS-N8l" secondAttribute="top" id="nVj-Gc-Mfa"/>
+                <constraint firstAttribute="bottom" secondItem="ozZ-ND-AmH" secondAttribute="bottom" id="rI7-QK-QV9"/>
+            </constraints>
+            <connections>
+                <outlet property="myCountLabel" destination="gKF-nE-v79" id="rcP-8Q-72W"/>
+                <outlet property="mySearchTextField" destination="dPQ-1b-Fpp" id="2lj-3h-ww3"/>
+                <outlet property="myTableView" destination="flQ-4o-EIp" id="1yk-IJ-LRG"/>
+                <outlet property="myToggleView" destination="JMx-1p-qAz" id="Lpt-SZ-J1B"/>
+                <outlet property="nenzoTabButton" destination="ZxX-pl-JmX" id="0hE-Ps-AIk"/>
+                <outlet property="phoneTabButton" destination="fLx-Q6-e8W" id="NL0-0Q-Gsa"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back_x1" width="14" height="23"/>
+        <image name="Nenzo@1x" width="20" height="6"/>
+        <image name="Nenzo_White@1x" width="20" height="6"/>
+        <image name="Phone_Orange@1x" width="11" height="12"/>
+        <image name="Phone_White@1x" width="12" height="12"/>
+    </resources>
+</document>
