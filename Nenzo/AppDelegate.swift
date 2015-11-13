@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // test comment insert
     
     // test insert 2
+    
+    // test insert 3
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
